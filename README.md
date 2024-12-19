@@ -15,7 +15,12 @@ docker compose build
 docker compose up -d
 ```
 
-Установка проекта (далее все команды выполняются к контейнере ```securitm-php-1```)
+Установка проекта (далее все команды выполняются к контейнере ```securitm-php-1```), поэтому проваливаемся в контейнер
+```bash
+docker exec -it securitm-php-1 /bin/sh
+```
+
+и запускаем установку
 ```bash
 composer install
 ```
