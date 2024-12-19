@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "3a8e4221-d90a-4e84-8ff3-5de73be94d5b",
+		"name": "securitm.ru",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22557625"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/api/users?order=asc&col=name&search=ro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "col",
+							"value": "name"
+						},
+						{
+							"key": "search",
+							"value": "ro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Joe 12\",\n    \"email\": \"joe12@mail.site\",\n    \"ip\": \"127.0.0.1\",\n    \"comment\": \"comment example\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Joe 15\",\n    \"email\": \"joe15@mail.site\",\n    \"ip\": \"127.0.0.1\",\n    \"comment\": \"comment example\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/users/205",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"users",
+						"205"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/api/users/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"users",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:81/api/users/203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"users",
+						"203"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
