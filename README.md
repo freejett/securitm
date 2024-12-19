@@ -5,14 +5,19 @@
 
 Сборка:
 
-```
+```bash
 docker compose build
 ```
 
 Запуск:
 
-```
+```bash
 docker compose up -d
+```
+
+Установка проекта (далее все команды выполняются к контейнере ```securitm-php-1```)
+```bash
+composer install
 ```
 
 Если падает ошибка ```Class "Modules\Users\Http\Controllers\Api\UserController" does not exist```, то нужно запустить команду 
@@ -20,6 +25,8 @@ docker compose up -d
 ```bash
 composer dump-autoload
 ```
+
+Копируем ```.env.example``` в ```.env```
 
 Весь код работы с пользователями лежит в папке 'modules'
 
